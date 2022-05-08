@@ -1,0 +1,6 @@
+@echo off
+powershell -Command "& { iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1 | iex; iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/master/install.ps1 | iex; spicetify upgrade; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.ps1" | Invoke-Expression; spicetify apply; }"
+Xcopy /E /I /Y "C:\Users\Pranav Sitaraman\spicetify-cli" "C:\Users\Pranav Sitaraman\Documents\Other\spicetify-cli"
+rmdir /s /q "C:\Users\Pranav Sitaraman\spicetify-cli"
+powershell -Command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/mrpond/BlockTheSpot/master/install.ps1' | Invoke-Expression }"
+powershell -Command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/amd64fox/SpotX/main/Install.ps1' | Invoke-Expression; }"
